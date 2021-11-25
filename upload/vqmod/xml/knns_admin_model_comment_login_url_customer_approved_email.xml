@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<modification
+		xmlns="https://github.com/vqmod/vqmod"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd"
+		>
+		<id><![CDATA[[VQMOD] Comment login URL in customer approved email]]></id>
+		<version>0.1.0</version>
+		<vqmver>2.6.6</vqmver>
+		<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
+		<file path="admin/model/customer/" name="customer.php" error="log">
+			<operation error="skip">
+				<search position="replace"><![CDATA[$message .= $language->get('text_approve_login') . "\n";]]></search>
+				<add><![CDATA[
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (start)
+			//$message .= $language->get('text_approve_login') . "\n";
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (end)
+				]]></add>
+			</operation>
+			<operation error="skip">
+				<search position="replace"><![CDATA[$message .= $store_url . "\n\n";]]></search>
+				<add><![CDATA[
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (start)
+			//$message .= $store_url . "\n\n";
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (end)
+				]]></add>
+			</operation>
+			<operation error="skip">
+				<search position="replace"><![CDATA[$message .= $language->get('text_approve_services') . "\n\n";]]></search>
+				<add><![CDATA[
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (start)
+			//$message .= $language->get('text_approve_services') . "\n\n";
+			// knns_admin_model_comment_login_url_customer_approved_email.xml (end)
+				]]></add>
+			</operation>
+		</file>
+	</modification>
